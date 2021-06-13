@@ -5,6 +5,9 @@ using MSM.Core.Models;
 
 namespace MSM.Core.Interfaces
 {
+    /// <summary>
+    /// Product Interface to get products
+    /// </summary>
     public interface IProductService
     {
         List<Product> GetProducts();

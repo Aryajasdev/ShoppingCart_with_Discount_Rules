@@ -6,6 +6,9 @@ using MSM.Core.Strategy;
 
 namespace MSM.Core.Impl
 {
+    /// <summary>
+    /// Engine to apply discounts plugged in with basket
+    /// </summary>
     public class DiscountEngine : IDiscountEngine
     {
         public decimal ApplyDiscount(Basket basket, List<DiscountStrategy> discountStrategies)

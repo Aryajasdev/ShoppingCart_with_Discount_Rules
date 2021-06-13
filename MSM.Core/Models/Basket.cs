@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace MSM.Core.Models
 {
+    /// <summary>
+    /// Basket Model 
+    /// </summary>
     public class Basket
     {
         public Basket()

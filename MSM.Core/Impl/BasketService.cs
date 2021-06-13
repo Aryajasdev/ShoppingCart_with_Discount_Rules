@@ -6,17 +6,20 @@ using MSM.Core.Strategy;
 
 namespace MSM.Core.Impl
 {
+    /// <summary>
+    /// Basket service to get Total after applying plugged in discount strategies to basket and get total amount after discount
+    /// </summary>
     public class BasketService : IBasketService
     {
         private readonly IProductService productService;
-        private readonly IDiscountEngine discountService;
+        private readonly IDiscountEngine discountEngine;
         private readonly List<DiscountStrategy> discountStrategies;
         public BasketService(IProductService productService, 
             IDiscountEngine discountService,
             List<DiscountStrategy> discountStrategies)
         {
             this.productService = productService;
-            this.discountService = discountService;
+            this.discountEngine = discountService;
             this.discountStrategies = discountStrategies;
         }
 
@@ -24,7 +27,7 @@ namespace MSM.Core.Impl
         {
             if (basket == null) return 0;
             
-            var discount = discountService.ApplyDiscount(basket, discountStrategies);
+            var discount = discountEngine.ApplyDiscount(basket, discountStrategies);
             var total = basket.BasketItem.Sum(x => x.Quantity * x.Product.Price);
             return total - discount;
         }

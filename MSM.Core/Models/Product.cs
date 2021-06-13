@@ -1,5 +1,8 @@
 ﻿namespace MSM.Core.Models
 {
+    /// <summary>
+    /// Product Model
+    /// </summary>
     public class Product
     {
         public int Id { get; set; }

@@ -4,7 +4,10 @@ using MSM.Core.Models;
 
 namespace MSM.Core.Strategy
 {
-    public class AssociateProductDiscountStrategy : DiscountStrategy, IStrategy
+    /// <summary>
+    /// Derived class of Base DiscountStrategy to implement Associate product based discount logic
+    /// </summary>
+    public class AssociateProductDiscountStrategy : DiscountStrategy
     {
         public AssociateProductDiscountStrategy(int productId, int minQuantity,
             int offerProductId, decimal offerPercentage) : base(productId, minQuantity, offerProductId, offerPercentage)

@@ -6,6 +6,9 @@ using MSM.Core.Models;
 
 namespace MSM.Core.Impl
 {
+    /// <summary>
+    /// Concrete implamentation of product service
+    /// </summary>
     public class ProductService : IProductService
     {
         public List<Product> Products { get; set; }

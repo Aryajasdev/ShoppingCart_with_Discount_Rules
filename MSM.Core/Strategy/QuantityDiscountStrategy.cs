@@ -1,10 +1,12 @@
 ﻿using System.Linq;
-using MSM.Core.Interfaces;
 using MSM.Core.Models;
 
 namespace MSM.Core.Strategy
 {
-    public class QuantityDiscountStrategy : DiscountStrategy, IStrategy
+    /// <summary>
+    /// Derived class of Base DiscountStrategy to implement Quantity based discount logic
+    /// </summary>
+    public class QuantityDiscountStrategy : DiscountStrategy
     {
         public QuantityDiscountStrategy(int productId, int minQuantity, int offerProductId, decimal offerPercentage) : base(productId, minQuantity, offerProductId, offerPercentage)
         {

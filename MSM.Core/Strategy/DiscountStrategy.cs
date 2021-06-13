@@ -2,6 +2,9 @@
 
 namespace MSM.Core.Strategy
 {
+    /// <summary>
+    /// Abstract base class for Discount Strategies, rest child classes will inherit this class and must implement calculation with their strategy logic
+    /// </summary>
     public abstract class DiscountStrategy
     {
         public int ProductId { get; set; }
